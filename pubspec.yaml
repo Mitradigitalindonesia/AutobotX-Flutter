@@ -1,4 +1,16 @@
-dependencies:
-  flutter:
-    sdk: flutter
-  webview_flutter: ^4.2.2
+workflows:
+  android-build:
+    name: Build APK
+    max_build_duration: 10
+    environment:
+      flutter: stable
+    scripts:
+      - flutter channel stable
+      - flutter upgrade
+      - flutter pub get
+      - flutter build apk --release
+    cache:
+      paths:
+        - $HOME/.pub-cache
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
