@@ -1,19 +1,18 @@
-name: namaproject
-description: Deskripsi project kamu
+name: autobotx
+description: A Flutter app with webview.
+publish_to: "none"
 
 environment:
-  sdk: ">=3.8.0 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  # dependencies lain...
+  webview_flutter: ^4.0.7  # Versi ini cocok untuk Flutter 3.x
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  # dev dependencies lain...
 
 flutter:
   uses-material-design: true
